@@ -21,18 +21,6 @@ def _validate_alpha(alpha: float) -> None:
 def historical_var(returns: pd.Series, alpha: float = 0.99) -> float:
     """
     Historical Value at Risk (VaR).
-
-    Parameters
-    ----------
-    returns : pd.Series
-        Portfolio returns.
-    alpha : float
-        Confidence level.
-
-    Returns
-    -------
-    float
-        Value at Risk (positive number).
     """
     _validate_returns(returns)
     _validate_alpha(alpha)
@@ -44,18 +32,6 @@ def historical_var(returns: pd.Series, alpha: float = 0.99) -> float:
 def historical_es(returns: pd.Series, alpha: float = 0.99) -> float:
     """
     Historical Expected Shortfall (ES).
-
-    Parameters
-    ----------
-    returns : pd.Series
-        Portfolio returns.
-    alpha : float
-        Confidence level.
-
-    Returns
-    -------
-    float
-        Expected Shortfall (positive number).
     """
     _validate_returns(returns)
     _validate_alpha(alpha)
