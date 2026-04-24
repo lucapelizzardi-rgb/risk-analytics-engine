@@ -9,20 +9,6 @@ def compute_returns(
 ) -> pd.DataFrame:
     """
     Compute asset returns from price data.
-
-    Parameters
-    ----------
-    prices : pd.DataFrame
-        Price time series (index = dates, columns = assets).
-    method : str
-        Return type: "log" or "simple".
-    dropna : bool
-        Whether to drop NaN values after computation.
-
-    Returns
-    -------
-    pd.DataFrame
-        Returns time series.
     """
     if not isinstance(prices, pd.DataFrame):
         raise TypeError("prices must be a pandas DataFrame")
@@ -50,20 +36,7 @@ def aggregate_returns(
 ) -> pd.DataFrame:
     """
     Aggregate returns over a given time horizon.
-
     For log-returns, aggregation is additive.
-
-    Parameters
-    ----------
-    returns : pd.DataFrame
-        Daily returns.
-    horizon_days : int
-        Number of days to aggregate.
-
-    Returns
-    -------
-    pd.DataFrame
-        Aggregated returns.
     """
     if horizon_days < 1:
         raise ValueError("horizon_days must be >= 1")
