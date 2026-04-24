@@ -4,19 +4,7 @@ import pandas as pd
 
 def validate_weights(weights, tol: float = 1e-6) -> None:
     """
-    Validate portfolio weights.
-
-    Parameters
-    ----------
-    weights : dict or pd.Series
-        Asset weights.
-    tol : float
-        Tolerance for sum of weights.
-
-    Raises
-    ------
-    ValueError
-        If weights are invalid.
+    Valida pesi di portfolio.
     """
     if isinstance(weights, dict):
         weights = pd.Series(weights)
@@ -36,19 +24,7 @@ def portfolio_returns(
     weights,
 ) -> pd.Series:
     """
-    Compute portfolio returns as weighted sum of asset returns.
-
-    Parameters
-    ----------
-    asset_returns : pd.DataFrame
-        Asset return time series.
-    weights : dict or pd.Series
-        Portfolio weights.
-
-    Returns
-    -------
-    pd.Series
-        Portfolio returns.
+    Calcola i rendimenti del portafoglio come somma ponderata dei rendimenti degli asset.
     """
     if not isinstance(asset_returns, pd.DataFrame):
         raise TypeError("asset_returns must be a pandas DataFrame")
