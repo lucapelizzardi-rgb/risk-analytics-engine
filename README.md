@@ -31,5 +31,3 @@ scipy
 ```
 
 ---
-
-## Project Structure / Struttura del Progetto
